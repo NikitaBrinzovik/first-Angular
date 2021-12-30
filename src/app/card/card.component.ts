@@ -45,6 +45,8 @@ export class CardComponent implements OnInit{
   }
   disabled = false
 
+  cardDate: Date = new Date()
+
   ngOnInit() {
     console.log('ngOnInit')
     setInterval(() => {

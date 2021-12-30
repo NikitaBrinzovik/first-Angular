@@ -14,4 +14,14 @@
     <br>
     <button [disabled]="disabled">Enable</button>
   </div>
+
+  <div>
+    <hr>
+    <strong> {{ cardDate | date }} </strong>
+    <br>
+    <span> {{ cardDate | date:'mediumTime' }} </span>
+    <br>
+    <span> Custom time settings:  </span>
+    <strong style="background-color: bisque"> {{ cardDate | date:'d MMMM yyyy HH:mm:ss':'':'ru' }} </strong>
+  </div>
 </div>

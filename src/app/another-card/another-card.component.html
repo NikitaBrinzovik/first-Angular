@@ -1,42 +1,41 @@
 <div class="card">
-  <h2>{{ title }}</h2>
-  <h2 [ngStyle]="{
+  <!--<h2 [ngStyle]="{
   color: title.length < 5 ? 'orange' : 'green',
   fontWeight: title.length < 8 ? 'normal' : 'bold'
-}">{{ title }}</h2>
-  }
-  <p>{{ text }}</p>
-  <strong>Number: {{ number }}</strong>
+}">{{ title }}</h2>-->
 
-  <p class="text">{{ text }}</p>
+  <h2 [ngStyle]="{
+  color: card.title.length < 8 ? 'orange' : 'green',
+  fontWeight: card.title.length < 10 ? 'normal' : 'bold'
+}">{{ card.title }}</h2>
 
+  <strong>Number: {{ index }}</strong>
 
   <p class="text" [ngClass]="{
   green: textColor === 'green',
   red: textColor === 'red'
-    }">{{ text }}</p>
+    }">{{ card.text }}</p>
 
   <p
     class="text"
     [class.green]="textColor === 'green'"
     [class.red]="textColor === 'red'"
-  >{{ text }}</p>
+  >{{ card.text }}</p>
 
 
   <div class="buttons">
     <button (click)="changeTitle()"> Change title</button>
-    <button (click)="title = 'Inline title'"> Change title inline</button>
+    <button (click)="card.title = 'Inline title'"> Change title inline</button>
 
     <button (click)="textColor = 'red'">Set Red</button>
     <button (click)="textColor = 'green'">Set Green</button>
   </div>
 
   <div class="inputs">
-    <input type="text" (input)="inputHandle($event)" [value]="title">
+    <input type="text" (input)="inputHandle($event)" [value]="card.title">
     <input type="text" #myInput (input)="secondInputHandle(myInput.value)"
-           [value]="title">
-
+           [value]="card.title">
     <!--     - не забыть подключить модуль FormComponent -->
-<!--    <input type="text" [(ngModel)]="title" (ngModelChange)="changeHandleByModel()" )>-->
+<!--    <input type="text" [(ngModel)]="card.title" (ngModelChange)="changeHandleByModel()" )>-->
   </div>
 </div>
