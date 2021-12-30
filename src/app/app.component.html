@@ -1,3 +1,23 @@
 <div class="container">
-  <h1>hello</h1>
+  <h1>Welcome to my own hell!</h1>
+
+  <hr>
+  <button (click)="toggleCards()">Toggle Cards</button>
+  <hr>
+
+  <div *ngIf="toggle; else noCards">
+    <app-card></app-card>
+    <app-card></app-card>
+    
+    <app-another-card
+      *ngFor="let iterCard of cards"
+    ></app-another-card>
+
+    <app-form></app-form>
+  </div>
+
+  <ng-template #noCards>
+      <p>Cards are hidden!</p>
+  </ng-template>
+
 </div>

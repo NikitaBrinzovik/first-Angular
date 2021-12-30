@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>{{ title }}</h2>
+  <p>{{ text }}</p>
+  <strong>Number: {{ number }}</strong>
+  <em>{{ array }}</em>
+  <p>{{ obj | json}}</p>
+  <p>{{ getInfo() }}</p>
+
+
+  <div>
+    <!--  <img src="{{ imgUrl }}" alt="just img">-->
+    <!--  баиндим динамическую переменную через квадратные скобки -->
+    <img [src]="imgUrl" alt="just img">
+    <br>
+    <button [disabled]="disabled">Enable</button>
+  </div>
+</div>
