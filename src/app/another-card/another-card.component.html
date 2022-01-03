@@ -36,6 +36,6 @@
     <input type="text" #myInput (input)="secondInputHandle(myInput.value)"
            [value]="card.title">
     <!--     - не забыть подключить модуль FormComponent -->
-<!--    <input type="text" [(ngModel)]="card.title" (ngModelChange)="changeHandleByModel()" )>-->
+    <input type="text" [(ngModel)]="card.title" (ngModelChange)="changeHandleByModel()" >
   </div>
 </div>

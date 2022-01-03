@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import localeRu from '@angular/common/locales/ru';
+
 
 import {AppComponent} from './app.component';
 import {CardComponent} from './card/card.component';
@@ -21,6 +22,7 @@ registerLocaleData(localeRu, 'ru')
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
